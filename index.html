@@ -24,6 +24,7 @@
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" media="screen">
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jsptlk85gf"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body class="outside-bottom-bar-page">
 <div id="preloader">
@@ -385,8 +386,22 @@
                             class="de-icon-truck"></i></div>
                     <h3 class="inline">무료 셔틀버스</h3>
                     <ul>
-                        <li>1호선 대방역3번출구 / 7호선 보라매역 5번출구로 나오셔서 셔틀버스를 타시면됩니다.</li>
-                        <li>결혼식 있을때만 운행하며, 예식시간 1시간30분 전부터 10분-15분간격 운행합니다.</li>
+                        <li>카카오톡 플러스 친구를 통해 안내하겠습니다.</li>
+                        <li>방법 1. 하단의 친구추가 버튼을 클릭하시면 카카오톡 플러스 친구를 추가할 수 있습니다.</li>
+                            <ul><div id="plusfriend-addfriend-button"></div>
+                                <script type='text/javascript'>
+                                    //<![CDATA[
+                                    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+                                    Kakao.init('729ec0c47fb2ab0c8a71c1e75360394b');
+                                    // 플러스친구 친구추가 버튼을 생성합니다.
+                                    Kakao.PlusFriend.createAddFriendButton({
+                                        container: '#plusfriend-addfriend-button',
+                                        plusFriendId: '_xiptJT' // 플러스친구 홈 URL에 명시된 id로 설정합니다.
+                                    });
+                                    //]]>
+                                </script></ul>
+                        <li>방법 2. 카카오톡 플러스 친구 검색</li>
+                            <ul>성수세미 검색</ul>
                     </ul>
                     <div class="de-icon circle small-size inline" style="background-color:#0d9a48"><i
                             class="de-icon-rebel"></i></div>
