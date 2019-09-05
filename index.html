@@ -360,17 +360,56 @@
             <div class="row">
                 <div class="col-md-12 animation fadeIn">
                     <div id="map" style="width:100%;height:400px;margin-bottom:20px;"></div>
-
+<!--                    https://navermaps.github.io/maps.js.ncp/docs/img/example/sally.png-->
                     <script>
-                        var map = new naver.maps.Map('map', {
+                        var HOME_PATH = window.HOME_PATH || '.';
+                        var position = new naver.maps.LatLng(35.888231299999774, 128.65190390000032);
+
+                        var mapOptions = {
                             useStyleMap: true,
+                            zoomControl: true,
                             zoom: 19,
-                            center: new naver.maps.LatLng(35.888231299999774, 128.65190390000032)
-                        });
-                        var marker = new naver.maps.Marker({
-                            position: new naver.maps.LatLng(35.888231299999774, 128.65190390000032),
-                            map: map
-                        });
+                            center: position,
+                            zoomControlOptions: {
+                                style: naver.maps.ZoomControlStyle.SMALL,
+                                position: naver.maps.Position.TOP_RIGHT
+                            }
+                        };
+
+                        var map = new naver.maps.Map(document.getElementById('map'), mapOptions);
+
+                        var imageIcon = {
+                            url : 'https://stickershop.line-scdn.net/stickershop/v1/sticker/72822943/iPhone/sticker_animation@2x.png;compress=true',
+                            size: new naver.maps.Size(100, 100),
+                            scaledSize : new naver.maps.Size(100, 100),
+                            origin: new naver.maps.Point(0, 0),
+                            anchor: new naver.maps.Point(25, 26)
+                        }
+
+                        var markerOptions = {
+                            position: position.destinationPoint(90, 15),
+                            map: map,
+                            icon: imageIcon
+
+                            // icon: {
+                            //     url: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/72822943/iPhone/sticker_animation@2x.png;compress=true',
+                            //     size: new naver.maps.Size(400, 400),
+                            //     origin: new naver.maps.Point(0, 0),
+                            //     anchor: new naver.maps.Point(25, 26)
+                            // }
+                        };
+                        // var markerOptions = {
+                        //     position: position.destinationPoint(90, 15),
+                        //     map: map,
+                        //     icon: {
+                        //         url: HOME_PATH +'/img/example/sally.png',
+                        //         size: new naver.maps.Size(50, 52),
+                        //         origin: new naver.maps.Point(0, 0),
+                        //         anchor: new naver.maps.Point(25, 26)
+                        //     }
+                        // };
+
+                        var marker = new naver.maps.Marker(markerOptions);
                     </script>
 
                     <!--                    <img src="./images/map.jpg"-->
