@@ -23,7 +23,8 @@
     <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" media="screen">
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jsptlk85gf"></script>
+    <script type="text/javascript"
+            src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jsptlk85gf"></script>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body class="outside-bottom-bar-page">
@@ -372,23 +373,35 @@
                         });
                     </script>
 
-<!--                    <img src="./images/map.jpg"-->
-<!--                                                             style="width: 100%; margin-bottom:20px;"/>-->
+                    <!--                    <img src="./images/map.jpg"-->
+                    <!--                                                             style="width: 100%; margin-bottom:20px;"/>-->
                     <div class="de-icon circle small-size inline" style="background-color:#f0394d"><i
                             class="de-icon-address"></i></div>
                     <h3 class="inline">오시는 길</h3>
                     <ul>
-                        <li>도로명 주소 : 대구광역시 동구 동촌로 87</li>
-                        <li>지번 주소 : 대구광역시 동구 검사동 990-9</li>
-                        <li>TEL 1800-1999</li>
+                        <li>도로명 주소
+                            <ul>
+                                <li>대구광역시 동구 동촌로 87</li>
+                            </ul>
+                        </li>
+                        <li>지번 주소
+                            <ul>
+                                <li>대구광역시 동구 검사동 990-9</li>
+                            </ul>
+                        </li>
+                        <li>전화 번호
+                            <ul>
+                                <li>1800-1999</li>
+                            </ul>
+                        </li>
                     </ul>
                     <div class="de-icon circle small-size inline" style="background-color:#f6700e"><i
                             class="de-icon-truck"></i></div>
                     <h3 class="inline">무료 셔틀버스</h3>
                     <ul>
-                        <li>카카오톡 플러스 친구를 통해 안내하겠습니다.
+                        <li>카카오톡 플러스 친구를 통해 안내하겠습니다. 아래 방법 중 하나를 통해서 친구 추가 해주세요.
                             <ol>
-                                <li>하단의 친구추가 버튼을 클릭하시면 카카오톡 플러스 친구를 추가할 수 있습니다.
+                                <li>하단의 친구추가 버튼을 클릭
                                     <ul>
                                         <li>
                                             <a href="javascript:void addPlusFriend()">
@@ -397,11 +410,11 @@
                                             <script type='text/javascript'>
                                                 //<![CDATA[
                                                 // 사용할 앱의 JavaScript 키를 설정해 주세요.
-                                                Kakao.init('YOUR APP KEY');
+                                                Kakao.init('729ec0c47fb2ab0c8a71c1e75360394b');
 
                                                 function addPlusFriend() {
                                                     Kakao.PlusFriend.addFriend({
-                                                        plusFriendId: '_xcLqmC' // 플러스친구 홈 URL에 명시된 id로 설정합니다.
+                                                        plusFriendId: '_xiptJT' // 플러스친구 홈 URL에 명시된 id로 설정합니다.
                                                     });
                                                 }
 
@@ -423,7 +436,7 @@
                     <div class="de-icon circle small-size inline" style="background-color:#0d9a48"><i
                             class="de-icon-rebel"></i></div>
                     <h3 class="inline">대중교통</h3>
-                    <ol>
+                    <ul>
                         <li>지하철
                             <ul>
                                 <li>1호선 동촌역 1번, 4번 출구</li>
@@ -434,13 +447,17 @@
                                 <li>동구1, 동구1-1, 동구3, 618, 805, 836, 980, 719</li>
                             </ul>
                         </li>
-                    </ol>
+                    </ul>
                     <div class="de-icon circle small-size inline" style="background-color:#9400d3"><i
                             class="de-icon-cab"></i></div>
                     <h3 class="inline">승용차</h3>
                     <ul>
-                        <li>팔공산 IC에서 오실 때 : 팔공산 IC를 나와서 첫 신호등에서 대구공항 방향으로 좌회전하여 계속 직진 후 막힌 삼거리 신호등에서 좌회전하여 약 3Km 직진하시면 동촌사거리 좌측에 있습니다.</li>
-                        <li>동대구 IC에서 오실 떼 : 동대구 IC를 나온 후 첫 신호등에서 좌회전하여 800m 직진 후 육교에서 우회전 후 200m 직진 후 좌회전하여 1.5km 정도 오신 후 두번째 육교에서 직진하시면 됩니다.</li>
+                        <li>팔공산 IC에서 오실 때 : 팔공산 IC를 나와서 첫 신호등에서 대구공항 방향으로 좌회전하여 계속 직진 후 막힌 삼거리 신호등에서 좌회전하여 약 3Km 직진하시면
+                            동촌사거리 좌측에 있습니다.
+                        </li>
+                        <li>동대구 IC에서 오실 떼 : 동대구 IC를 나온 후 첫 신호등에서 좌회전하여 800m 직진 후 육교에서 우회전 후 200m 직진 후 좌회전하여 1.5km 정도 오신
+                            후 두번째 육교에서 직진하시면 됩니다.
+                        </li>
                     </ul>
                 </div>
                 <!-- <div class="col-md-6 animation fadeIn"> <div id="map-canvas" style="border:15px solid #FFF; margin-top:20px;"></div></div>-->
