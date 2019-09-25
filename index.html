@@ -26,6 +26,12 @@
     <script type="text/javascript"
             src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=jsptlk85gf"></script>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<!--    // Add the new slick-theme.css if you want the default styling-->
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
 </head>
 <body class="outside-bottom-bar-page">
 <!--<div id="preloader">-->
@@ -96,7 +102,30 @@
                             <div class="de-icon circle medium-size custom-heart"><i class="de-icon-heart"></i></div>
                         </div>
                     </div>
-                    <p class="blurb animation fadeInLeft text-center"> 1987년 3월 21일 대구에서 태어났습니다. 대구에서 27년 살다가 취업 때문에 상경했고 현재 서울사람(?)입니다. 어릴 때 부터 컴퓨터 가지고 노는 것을 참 좋아했는데, 지금 IT 업계에서 컴퓨터로 먹고 살고 있습니다. 결혼은 꼭 예쁜 대구 여자와 하고 싶었는데, 드디어 해냈습니다. </p></div>
+                    <p class="blurb animation fadeInLeft text-center"> 1987년 3월 21일 대구에서 태어났습니다. 대구에서 27년 살다가 취업 때문에 상경했고 현재 서울사람(?)입니다. 어릴 때 부터 컴퓨터 가지고 노는 것을 참 좋아했는데, 지금 IT 업계에서 컴퓨터로 먹고 살고 있습니다. 결혼은 꼭 예쁜 대구 여자와 하고 싶었는데, 드디어 해냈습니다. </p>
+                    <script type="text/javascript">
+                        var feed = new Instafeed({
+                            get: 'user',
+                            userId: 1745732014,
+                            resolution: 'standard_resolution',
+                            accessToken: '1745732014.24a4054.f8481764a5f846a8b12a5a3e673310ea',
+                            template: '<div><img src="{{image}}" /></div>',
+                            // template: '<div><a href="{{link}}"><img src="{{image}}" /></a></div>',
+                            target: 'instafeed',
+                            after: function() {
+                                $('#instafeed').slick({
+                                    dots: true,
+                                    infinite: true,
+                                    speed: 300,
+                                    slidesToShow: 1,
+                                    adaptiveHeight: true
+                                });
+                            }
+                        });
+                        feed.run();
+                    </script>
+                    <div id="instafeed" class="instafeed"></div>
+                </div>
                 <div class="col-md-6">
                     <div class="photo-item frame-border animation fadeInRight"><img src="./images/childhood_semi.jpg"
                                                                                     alt=""
@@ -744,5 +773,9 @@ ga('send', 'pageview');</script>
 <script>jQuery(function () {
     jQuery.scrollDepth();
 });</script>
+
+<!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
+<!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+<script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 </html>
