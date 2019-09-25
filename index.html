@@ -95,14 +95,14 @@
                     <script type="text/javascript">
                         var feed = new Instafeed({
                             get: 'user',
-                            userId: 1745732014,
+                            userId: 21377412818,
                             resolution: 'standard_resolution',
-                            accessToken: '1745732014.24a4054.f8481764a5f846a8b12a5a3e673310ea',
+                            accessToken: '21377412818.28bacb9.9d36f8eec1544bdbb69d8cc633b70922',
                             template: '<div><img src="{{image}}" /></div>',
                             // template: '<div><a href="{{link}}"><img src="{{image}}" /></a></div>',
-                            target: 'instafeed',
+                            target: 'instafeed_seongsu',
                             after: function() {
-                                $('#instafeed').slick({
+                                $('#instafeed_seongsu').slick({
                                     dots: true,
                                     infinite: true,
                                     speed: 300,
@@ -119,7 +119,7 @@
 <!--                        <img src="./images/childhood_sseongsu.jpg"-->
 <!--                             alt=""-->
 <!--                             class="hover-animation image-zoom-in">-->
-                        <div id="instafeed" class="instafeed"></div>
+                        <div id="instafeed_seongsu" class="instafeed_seongsu"></div>
 <!--                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in"></div>-->
                     </div>
                     <div class="his-her-name"><h2 class="text-center">김성수</h2>
@@ -130,10 +130,33 @@
                     <p class="blurb animation fadeInLeft text-center"> 1987년 3월 21일 대구에서 태어났습니다. 대구에서 27년 살다가 취업 때문에 상경했고 현재 서울사람(?)입니다. 어릴 때 부터 컴퓨터 가지고 노는 것을 참 좋아했는데, 지금 IT 업계에서 컴퓨터로 먹고 살고 있습니다. 결혼은 꼭 예쁜 대구 여자와 하고 싶었는데, 드디어 해냈습니다. </p>
                 </div>
                 <div class="col-md-6">
-                    <div class="photo-item frame-border animation fadeInRight"><img src="./images/childhood_semi.jpg"
-                                                                                    alt=""
-                                                                                    class="hover-animation image-zoom-in">
-                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in"></div>
+                    <script type="text/javascript">
+                        var semi_feed = new Instafeed({
+                            get: 'user',
+                            userId: 21255403516,
+                            resolution: 'standard_resolution',
+                            accessToken: '21255403516.f2034e4.e15bce4559894cf2972f563528f81ce0',
+                            template: '<div><img src="{{image}}" /></div>',
+                            // template: '<div><a href="{{link}}"><img src="{{image}}" /></a></div>',
+                            target: 'instafeed_semi',
+                            after: function() {
+                                $('#instafeed_semi').slick({
+                                    dots: true,
+                                    infinite: true,
+                                    speed: 300,
+                                    slidesToShow: 1,
+                                    adaptiveHeight: true
+                                });
+                            }
+                        });
+                        semi_feed.run();
+                    </script>
+                    <div class="photo-item frame-border animation fadeInRight">
+                        <div id="instafeed_semi" class="instafeed_semi"></div>
+<!--                        <img src="./images/childhood_semi.jpg"-->
+<!--                                                                                    alt=""-->
+<!--                                                                                    class="hover-animation image-zoom-in">-->
+<!--                        <div class="layer wh100 hidden-black-overlay hover-animation fade-in"></div>-->
                     </div>
                     <div class="his-her-name"><h2 class="text-center">정세미</h2></div>
                     <p class="blurb animation fadeInRight text-center"> 1988년 12월 7일 대구에서 태어났습니다. 포항과 대구 등 경상도에서 죽 살다가 대학진학과 함께 서울 자취생활을 시작했고 10여년 넘게 계속되었습니다.
