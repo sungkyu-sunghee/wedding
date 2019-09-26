@@ -623,7 +623,7 @@
                                 <li>카카오톡 플러스 친구 검색
                                     <ul>
                                         <li>
-                                           <img width="50%" src="images/kakao_plug_guide.gif" />
+                                            <div id="kakao_plus_search"></div>
                                         </li>
                                     </ul>
                                 </li>
@@ -1078,6 +1078,13 @@ ga('send', 'pageview');</script>
 <script>jQuery(function () {
     jQuery.scrollDepth();
 });</script>
+<script type='text/javascript'>
+    if (device.mobile()) {
+        $('#kakao_plus_search').html('<img width="80%" src="images/kakao_plug_guide.gif" />');
+    } else {
+        $('#kakao_plus_search').html('<img width="50%" src="images/kakao_plug_guide.gif" />');
+    }
+</script>
 
 <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
 <!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
