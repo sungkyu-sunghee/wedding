@@ -809,7 +809,6 @@
     if (device.mobile()) {
         $('#kakao_plus_search').html('<img width="80%" src="images/kakao_plug_guide.gif" />');
         $('#our_wedding_photo').html('<div class="mobile_our_gallery">\n' +
-            '  <div class="photo-item frame-border  "><img src="./images/YUN_3583.jpg" alt="" class="hover-animation "></div>\n' +
             // '  <div class="photo-item frame-border  "><img src="./images/YUN_3738.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/01.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/02.jpg" alt="" class="hover-animation "></div>\n' +
@@ -820,7 +819,10 @@
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/07.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/08.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/09.jpg" alt="" class="hover-animation "></div>\n' +
-            '  <div class="photo-item frame-border  "><img src="./images/square_1021/10.jpg" alt="" class="hover-animation "></div>\n' +
+             '  <div class="photo-item frame-border  "><img src="./images/square_1021/10.jpg" alt="" class="hover-animation "></div>\n' +
+            '</div>\n' +
+            '<div class="mobile_our_gallery2">\n' +
+            // '  <div class="photo-item frame-border  "><img src="./images/YUN_3738.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/11.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/12.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/13.jpg" alt="" class="hover-animation "></div>\n' +
@@ -831,9 +833,19 @@
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/18.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/19.jpg" alt="" class="hover-animation "></div>\n' +
             '  <div class="photo-item frame-border  "><img src="./images/square_1021/20.jpg" alt="" class="hover-animation "></div>\n' +
-            '</div>');
+            '</div>\n');
         $(document).ready(function(){
             $('.mobile_our_gallery').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                // fade: true,
+                cssEase: 'ease',
+                adaptiveHeight: true
+            });
+        });
+        $(document).ready(function(){
+            $('.mobile_our_gallery2').slick({
                 dots: true,
                 infinite: true,
                 speed: 500,
